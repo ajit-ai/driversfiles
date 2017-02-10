@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	QUARTZ Configuration
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="dataImportJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.driversfiles.www.core.job.DataImportJob" />
+	</bean>
+
+	<bean id="dataImportJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="dataImportJob" />
+		<property name="cronExpression" value="0 */15 * * * ?" />
+	</bean>
+
+	<bean id="accessCodeCleanupJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.driversfiles.www.core.job.AccessCodeCleanupJob" />
+	</bean>
+
+	<bean id="accessCodeCleanupJobJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="accessCodeCleanupJob" />
+		<property name="cronExpression" value="0 */5 * * * ?" />
+	</bean>
+
+	<bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="startupDelay" value="${quartz.startupDelay}" />
+		<property name="triggers">
+			<list>
+				<ref bean="dataImportJobTrigger" />
+				<ref bean="accessCodeCleanupJobJobTrigger" />
+			</list>
+		</property>
+	</bean>
+
+</beans>
