@@ -1,10 +1,13 @@
 package com.driversfiles.www.config;
 
-import jakarta.servlet.ServletContext;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.boot.web.server.ErrorPage;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 
@@ -12,10 +15,8 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 public class WebConfig implements WebMvcConfigurer {
 
 	@Bean
-	public LayoutViewResolver layoutViewResolver(ServletContext servletContext) {
-		LayoutViewResolver resolver = new LayoutViewResolver();
-		resolver.initialize(servletContext);
-		return resolver;
+	public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> spaCustomizer() {
+		return (factory) -> factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/index.html"));
 	}
 
 	@Bean
