@@ -41,7 +41,13 @@ export const routes: Routes = [
       {
         path: 'admin',
         canActivate: [roleGuard('ROLE_ADMIN')],
-        loadComponent: () => import('./pages/coming-soon.component').then((m) => m.ComingSoonComponent)
+        loadComponent: () => import('./pages/admin/admin-shell.component').then((m) => m.AdminShellComponent),
+        children: [
+          { path: '', loadComponent: () => import('./pages/coming-soon.component').then((m) => m.ComingSoonComponent) },
+          { path: 'users', loadComponent: () => import('./pages/admin/admin-users.component').then((m) => m.AdminUsersComponent) },
+          { path: 'imports', loadComponent: () => import('./pages/admin/admin-imports.component').then((m) => m.AdminImportsComponent) },
+          { path: 'content', loadComponent: () => import('./pages/admin/admin-content.component').then((m) => m.AdminContentComponent) }
+        ]
       }
     ]
   },
