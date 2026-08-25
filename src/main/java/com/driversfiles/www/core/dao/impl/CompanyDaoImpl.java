@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * {@inheritDoc}
  *
- * @author Mark Burns
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 @Service("companyDao")
 @Transactional(readOnly=true)

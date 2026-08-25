@@ -23,8 +23,8 @@ import com.driversfiles.www.core.dao.Auditable;
 /**
  * Holds CDL data.
  *
- * @author Mark Burns
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "license")

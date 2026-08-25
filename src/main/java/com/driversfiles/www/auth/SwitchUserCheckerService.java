@@ -13,7 +13,7 @@ import com.driversfiles.www.core.data.Person;
 import com.driversfiles.www.core.data.PersonType;
 
 /**
- * @author mburns
+ * @author Ajit Kumar
  *
  */
 @Service("switchCheckerService")

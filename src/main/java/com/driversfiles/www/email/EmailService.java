@@ -6,8 +6,8 @@ import java.util.Map;
 /**
  * Service used to provide all email related functionality.
  * 
- * @author Erik R. Jensen
- * @author Abhinav Nahar
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 
 public interface EmailService {

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Handles common admin pages.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Controller
 public class AdminDashboardController extends BaseController {

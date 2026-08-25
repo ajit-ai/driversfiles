@@ -50,8 +50,8 @@ import java.util.Arrays;
 /**
  * Handles truck requests.
  *
- * @author Erik R. Jensen
- * @author Mark Burns
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 @Controller
 public class TrucksController {

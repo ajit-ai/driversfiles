@@ -3,7 +3,7 @@ package com.driversfiles.www.email;
 /**
  * Thrown when errors occur during email processing.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public class EmailException extends Exception {
 

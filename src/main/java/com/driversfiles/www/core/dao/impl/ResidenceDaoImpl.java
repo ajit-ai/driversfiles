@@ -14,7 +14,7 @@ import com.driversfiles.www.core.data.Residence;
 /**
  * {@inheritDoc}
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Service("residenceDao")
 @Transactional(readOnly=true)

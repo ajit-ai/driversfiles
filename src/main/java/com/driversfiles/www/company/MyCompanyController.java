@@ -40,7 +40,7 @@ import java.util.Arrays;
 /**
  * Handles My Company requests.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Controller
 public class MyCompanyController {

@@ -19,7 +19,7 @@ import jakarta.persistence.TemporalType;
 /**
  * Holds records of access to driver application
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "application_access")

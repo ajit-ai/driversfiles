@@ -8,7 +8,7 @@ import com.driversfiles.www.core.data.Traffic;
 /**
  * Data access methods for Traffic data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface TrafficDao extends Dao<Traffic, Long> {
 

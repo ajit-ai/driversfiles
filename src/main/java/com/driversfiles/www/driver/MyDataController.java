@@ -56,8 +56,8 @@ import com.driversfiles.www.spring.ValidationUtils;
 /**
  * Handles My Data requests.
  *
- * @author Erik R. Jensen
- * @author Mark Burns
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 @Controller
 public class MyDataController extends BaseController {

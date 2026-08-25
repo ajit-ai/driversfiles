@@ -21,7 +21,7 @@ import com.driversfiles.www.core.dao.Auditable;
 /**
  * Holds CompanyTruck data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "company_truck")

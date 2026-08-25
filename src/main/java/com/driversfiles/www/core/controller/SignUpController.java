@@ -20,7 +20,7 @@ import jakarta.validation.Valid;
 
 /**
  * Handles sign up.
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Controller
 public class SignUpController extends BaseController {

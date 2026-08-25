@@ -14,7 +14,7 @@ import com.driversfiles.www.core.data.Traffic;
 /**
  * {@inheritDoc}
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Service("trafficDao")
 @Transactional(readOnly=true)

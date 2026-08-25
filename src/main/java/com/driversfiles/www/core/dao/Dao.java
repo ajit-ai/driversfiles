@@ -10,7 +10,7 @@ import java.util.UUID;
 /**
  * Common contract for all data access objects.
  *
- * @author Jagadesh Varada
+ * @author Ajit Kumar
  */
 public interface Dao<T extends Serializable, P extends Serializable> {
 

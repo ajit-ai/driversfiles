@@ -21,7 +21,7 @@ import jakarta.persistence.TemporalType;
 /**
  * Holds Driver Residence data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "residence")

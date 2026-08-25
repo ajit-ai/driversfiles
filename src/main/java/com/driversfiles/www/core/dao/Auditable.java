@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Contract for auditable data objects.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface Auditable {
 

@@ -13,7 +13,7 @@ import java.util.Calendar;
 /**
  * JSP tag library for utility functions.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public class TagUtil {
 

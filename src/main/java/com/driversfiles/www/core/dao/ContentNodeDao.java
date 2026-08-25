@@ -5,7 +5,7 @@ import com.driversfiles.www.core.data.ContentNode;
 /**
  * Provides methods for working with content nodes.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface ContentNodeDao extends Dao<ContentNode, Long> {
 

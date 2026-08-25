@@ -8,8 +8,8 @@ import com.driversfiles.www.core.data.Person;
 /**
  * Data access methods for Company data.
  *
- * @author Mark Burns
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 public interface CompanyDao extends Dao<Company, Long> {
 

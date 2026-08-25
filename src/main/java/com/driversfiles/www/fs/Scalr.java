@@ -197,7 +197,7 @@ import javax.imageio.ImageIO;
  * enabled to avoid the (hidden) cost of constructing the Object[] argument for
  * the varargs-based method call.
  * 
- * @author Riyad Kalla (software@thebuzzmedia.com)
+ * @author Ajit Kumar
  * @since 1.1
  */
 public class Scalr {
@@ -355,7 +355,7 @@ public class Scalr {
 	/**
 	 * Used to define the different scaling hints that the algorithm can use.
 	 * 
-	 * @author Riyad Kalla (software@thebuzzmedia.com)
+	 * @author Ajit Kumar
 	 * @since 1.1
 	 */
 	public static enum Method {
@@ -418,7 +418,7 @@ public class Scalr {
 	 * Used to define the different modes of resizing that the algorithm can
 	 * use.
 	 * 
-	 * @author Riyad Kalla (software@thebuzzmedia.com)
+	 * @author Ajit Kumar
 	 * @since 3.1
 	 */
 	public static enum Mode {
@@ -462,7 +462,7 @@ public class Scalr {
 	 * Used to define the different types of rotations that can be applied to an
 	 * image during a resize operation.
 	 * 
-	 * @author Riyad Kalla (software@thebuzzmedia.com)
+	 * @author Ajit Kumar
 	 * @since 3.2
 	 */
 	public static enum Rotation {

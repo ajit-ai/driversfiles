@@ -21,7 +21,7 @@ import com.driversfiles.www.core.data.Person;
 /**
  * Handles My Account requests.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Controller
 public class AccountController {

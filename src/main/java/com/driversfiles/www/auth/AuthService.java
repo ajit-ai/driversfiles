@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Provide authentication and authorization services.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface AuthService extends UserDetailsService {
 

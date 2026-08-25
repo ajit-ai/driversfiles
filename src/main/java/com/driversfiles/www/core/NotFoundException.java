@@ -3,7 +3,7 @@ package com.driversfiles.www.core;
 /**
  * Thrown when a resource is not found.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public class NotFoundException extends RuntimeException {
 

@@ -23,7 +23,7 @@ import com.driversfiles.www.core.data.State;
 /**
  * Handles My Drivers requests.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Controller
 public class MyDriversController {

@@ -3,7 +3,7 @@ package com.driversfiles.www.quartz;
 /**
  * Provides operations to work with quartz jobs.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface JobService {
 

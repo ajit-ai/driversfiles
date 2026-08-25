@@ -10,7 +10,7 @@ import org.quartz.PersistJobDataAfterExecution;
 /**
  * Base class for Spring aware Quartz jobs.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @PersistJobDataAfterExecution
 @DisallowConcurrentExecution

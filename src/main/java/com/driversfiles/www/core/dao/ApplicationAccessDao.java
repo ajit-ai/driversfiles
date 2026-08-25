@@ -9,7 +9,7 @@ import com.driversfiles.www.core.data.Driver;
 /**
  * Data access methods for ApplicationAccess data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface ApplicationAccessDao extends Dao<ApplicationAccess, Long> {
 

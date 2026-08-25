@@ -12,8 +12,8 @@ import java.util.Set;
 /**
  * Holds Truck data.
  *
- * @author Mark Burns
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "truck")

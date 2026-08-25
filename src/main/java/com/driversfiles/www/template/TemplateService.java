@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Service used to provide all template processing and related functionality.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface TemplateService {
 

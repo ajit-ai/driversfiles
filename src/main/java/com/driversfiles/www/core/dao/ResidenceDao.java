@@ -8,7 +8,7 @@ import com.driversfiles.www.core.data.Residence;
 /**
  * Data access methods for residence data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface ResidenceDao extends Dao<Residence, Long> {
 

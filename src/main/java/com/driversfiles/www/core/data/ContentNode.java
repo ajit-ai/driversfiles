@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Holds content node data.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "content_node")

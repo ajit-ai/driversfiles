@@ -16,8 +16,8 @@ import jakarta.persistence.FetchType;
 /**
  * Holds role data.
  * 
- * @author Jagadesh Varada
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "role")

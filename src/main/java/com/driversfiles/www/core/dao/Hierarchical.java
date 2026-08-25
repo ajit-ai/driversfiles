@@ -3,7 +3,7 @@ package com.driversfiles.www.core.dao;
 /**
  * Contract for heirarchical types.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface Hierarchical<T extends Hierarchical> {
 

@@ -21,7 +21,7 @@ import jakarta.persistence.TemporalType;
 /**
  * Holds document data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "document")

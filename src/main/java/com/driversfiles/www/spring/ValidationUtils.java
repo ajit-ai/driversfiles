@@ -8,7 +8,7 @@ import org.springframework.validation.Errors;
 /**
  * This class provides additional validation methods on top of those provided by Spring.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public class ValidationUtils extends org.springframework.validation.ValidationUtils {
 

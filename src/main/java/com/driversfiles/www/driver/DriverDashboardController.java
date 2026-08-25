@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * Handles driver page requests.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Controller
 public class DriverDashboardController extends BaseController {

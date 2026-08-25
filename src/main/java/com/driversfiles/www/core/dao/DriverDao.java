@@ -8,7 +8,7 @@ import com.driversfiles.www.core.data.Person;
 /**
  * Data access methods for driver data.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface DriverDao extends Dao<Driver, Long> {
 

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Holds authentication details for an authenticated user.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public class AuthDetails implements UserDetails {
 

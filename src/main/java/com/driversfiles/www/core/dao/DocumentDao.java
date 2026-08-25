@@ -8,7 +8,7 @@ import com.driversfiles.www.core.data.Person;
 /**
  * Data access methods for document data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface DocumentDao extends Dao<Document, Long> {
 

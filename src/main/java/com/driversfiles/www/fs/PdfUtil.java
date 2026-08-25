@@ -7,7 +7,7 @@ import java.io.InputStream;
 /**
  * Basic utility for checking PDF files
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public class PdfUtil {
 	

@@ -14,7 +14,7 @@ import com.driversfiles.www.core.data.License;
 /**
  * {@inheritDoc}
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Service("licenseDao")
 @Transactional(readOnly=true)

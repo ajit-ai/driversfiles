@@ -15,7 +15,7 @@ import java.util.Locale;
 /**
  * Handles public page requests.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Controller
 public class PublicController extends BaseController {

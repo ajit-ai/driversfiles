@@ -9,7 +9,7 @@ import com.driversfiles.www.core.data.Truck;
 /**
  * Data access methods for Truck data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface TruckDao extends Dao<Truck, Long> {
 

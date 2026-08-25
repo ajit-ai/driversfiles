@@ -9,8 +9,8 @@ import java.util.List;
 /**
  * Handles event data access.
  * 
- * @author Erik R. Jensen
- * @author Abhinav Nahar
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 public interface EventDao extends Dao<Event, Long>{
 

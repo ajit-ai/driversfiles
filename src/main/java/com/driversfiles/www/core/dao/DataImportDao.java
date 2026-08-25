@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Handles data import data access.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface DataImportDao extends Dao<DataImport, Long> {
 

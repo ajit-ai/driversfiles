@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Provides access to person data.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface PersonDao extends Dao<Person, Long> {
 

@@ -8,7 +8,7 @@ import com.driversfiles.www.core.data.Employment;
 /**
  * Data access methods for employment data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface EmploymentDao extends Dao<Employment, Long> {
 

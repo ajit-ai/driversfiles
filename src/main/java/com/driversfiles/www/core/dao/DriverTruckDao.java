@@ -9,8 +9,8 @@ import com.driversfiles.www.core.data.Truck;
 /**
  * Data access methods for DriverTruck data.
  *
- * @author Mark Burns
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 public interface DriverTruckDao extends Dao<DriverTruck, Long> {
 

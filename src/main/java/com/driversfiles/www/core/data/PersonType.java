@@ -3,7 +3,7 @@ package com.driversfiles.www.core.data;
 /**
  * Holds system user types.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public enum PersonType {
 	ADMIN,

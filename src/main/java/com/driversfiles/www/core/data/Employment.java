@@ -21,7 +21,7 @@ import com.driversfiles.www.core.dao.Auditable;
 /**
  * Holds Employment data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "employment")

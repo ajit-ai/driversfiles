@@ -22,7 +22,7 @@ import com.driversfiles.www.core.dao.Auditable;
 /**
  * Holds Company data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "company")

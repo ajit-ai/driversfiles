@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * Holds driver data.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "driver")

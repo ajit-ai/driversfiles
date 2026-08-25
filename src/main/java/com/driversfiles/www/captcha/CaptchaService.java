@@ -7,7 +7,7 @@ import java.util.Locale;
 /**
  * This service handles call captcha related functionality.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public interface CaptchaService {
 

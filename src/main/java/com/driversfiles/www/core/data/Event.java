@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Holds event data.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "event")

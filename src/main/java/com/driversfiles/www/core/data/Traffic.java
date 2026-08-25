@@ -21,7 +21,7 @@ import jakarta.persistence.TemporalType;
 /**
  * Holds Traffic data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "traffic")

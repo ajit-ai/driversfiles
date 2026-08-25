@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Generates a unique 6 character code.
  * 
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public class AccessCode {
 	

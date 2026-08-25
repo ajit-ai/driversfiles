@@ -7,8 +7,8 @@ import java.util.List;
 /**
  * Provides access to role data.
  * 
- * @author Jagadesh Varada
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 public interface RoleDao extends Dao<Role, Long> {
 	

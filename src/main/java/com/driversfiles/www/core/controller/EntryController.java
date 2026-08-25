@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 /**
  * Handles initial entry after authentication.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Controller
 public class EntryController extends BaseController {

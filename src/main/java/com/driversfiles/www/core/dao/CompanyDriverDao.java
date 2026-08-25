@@ -9,8 +9,8 @@ import com.driversfiles.www.core.data.Driver;
 /**
  * Data access methods for CompanyDriver data.
  *
- * @author Mark Burns
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 public interface CompanyDriverDao extends Dao<CompanyDriver, Long> {
 

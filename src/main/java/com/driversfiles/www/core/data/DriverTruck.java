@@ -22,7 +22,7 @@ import com.driversfiles.www.core.dao.Auditable;
 /**
  * Holds DriverTruck data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "driver_truck")

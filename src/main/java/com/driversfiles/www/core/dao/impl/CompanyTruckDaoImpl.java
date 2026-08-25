@@ -15,7 +15,7 @@ import com.driversfiles.www.core.data.Truck;
 /**
  * {@inheritDoc}
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Service("companyTruckDao")
 @Transactional(readOnly=true)

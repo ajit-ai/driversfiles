@@ -9,7 +9,7 @@ import com.driversfiles.www.core.data.Truck;
 /**
  * Data access methods for CompanyTruck data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface CompanyTruckDao extends Dao<CompanyTruck, Long> {
 

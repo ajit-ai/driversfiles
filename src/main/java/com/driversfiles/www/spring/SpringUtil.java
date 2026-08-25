@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 /**
  * Spring related utility methods.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Component
 public class SpringUtil implements ApplicationContextAware, BeanFactoryAware {

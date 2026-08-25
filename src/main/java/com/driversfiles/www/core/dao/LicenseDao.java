@@ -8,8 +8,8 @@ import com.driversfiles.www.core.data.License;
 /**
  * Data access methods for license data.
  *
- * @author Mark Burns
- * @author Erik R. Jensen
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 public interface LicenseDao extends Dao<License, Long> {
 

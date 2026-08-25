@@ -26,7 +26,7 @@ import java.text.SimpleDateFormat;
 /**
  * Handles data mass import requests from admin users.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Controller
 public class DataImportController extends BaseController {

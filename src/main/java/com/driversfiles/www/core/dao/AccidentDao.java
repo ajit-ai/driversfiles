@@ -8,7 +8,7 @@ import com.driversfiles.www.core.data.Driver;
 /**
  * Data access methods for Accident data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 public interface AccidentDao extends Dao<Accident, Long> {
 

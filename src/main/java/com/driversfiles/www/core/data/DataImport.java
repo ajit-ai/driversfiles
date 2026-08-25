@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * Holds data import information.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "data_import")

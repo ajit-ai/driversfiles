@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Handles content management requests.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Controller
 public class ContentController {

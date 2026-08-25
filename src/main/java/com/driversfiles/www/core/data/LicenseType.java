@@ -3,7 +3,7 @@ package com.driversfiles.www.core.data;
 /**
  * Holds CDL license types.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public enum LicenseType {
 	CLASSA("Class A"),

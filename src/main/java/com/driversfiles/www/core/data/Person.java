@@ -14,7 +14,7 @@ import com.driversfiles.www.hibernate.HashedField;
 /**
  * Holds person data.
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "person")

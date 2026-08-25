@@ -3,7 +3,7 @@ package com.driversfiles.www.core.data;
 /**
  * Holds state information.
  * 
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 public enum State {
 

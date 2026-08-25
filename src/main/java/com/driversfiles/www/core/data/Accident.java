@@ -22,7 +22,7 @@ import jakarta.persistence.TemporalType;
 /**
  * Holds Accident data.
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Entity
 @Table(name = "accident")

@@ -3,8 +3,8 @@ package com.driversfiles.www.template;
 /**
  * Throw when errors occur during template processing.
  * 
- * @author Erik R. Jensen
- * @author Abhinav Nahar
+ * @author Ajit Kumar
+ * @author Ajit Kumar
  */
 public class TemplateException extends Exception {
 

@@ -14,7 +14,7 @@ import com.driversfiles.www.core.data.Accident;
 /**
  * {@inheritDoc}
  *
- * @author Mark Burns
+ * @author Ajit Kumar
  */
 @Service("accidentDao")
 @Transactional(readOnly=true)

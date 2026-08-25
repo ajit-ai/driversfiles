@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * {@inheritDoc}
  *
- * @author Erik R. Jensen
+ * @author Ajit Kumar
  */
 @Repository("contentNodeDao")
 @Transactional
