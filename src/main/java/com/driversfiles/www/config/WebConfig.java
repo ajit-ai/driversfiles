@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
@@ -17,11 +16,6 @@ public class WebConfig implements WebMvcConfigurer {
 		LayoutViewResolver resolver = new LayoutViewResolver();
 		resolver.initialize(servletContext);
 		return resolver;
-	}
-
-	@Bean
-	public InternalResourceViewResolver internalResourceViewResolver() {
-		return new InternalResourceViewResolver();
 	}
 
 	@Bean
