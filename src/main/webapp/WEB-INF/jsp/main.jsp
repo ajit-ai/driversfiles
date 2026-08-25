@@ -1,4 +1,4 @@
-﻿<%@ include file="include.jsp" %>
+<%@ include file="include.jsp" %>
 <div id="wrapper">
 	<div id="header">
 		<div id="header-login">
@@ -12,12 +12,14 @@
 			<security:authorize access="hasRole('ROLE_ADMIN')">
 				<a href="#" onclick="return doUserSearch();"><img src="${pageContext.request.contextPath}/resources/images/search_24x24.png" style="vertical-align: middle; margin-left: 20px;" /></a>
 				<form id="switchUserFormId" action="${pageContext.request.contextPath}/secure/admin/enter">
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 					<input type="text" id="adminUserNameId" name="j_username" style="width: 150px; vertical-align: middle;" />
 				</form>
 				<button style="vertical-align: middle" onclick="validateUserSwitch()">Enter</button>
 			</security:authorize>
 			<security:authorize access="hasRole('ROLE_PREVIOUS_ADMINISTRATOR')">
 				<form action="${pageContext.request.contextPath}/secure/exit">
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 					<input type="submit" value="Exit User" style="margin-left: 20px;"/>
 				</form>
 			</security:authorize>

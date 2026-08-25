@@ -53,9 +53,9 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http, SwitchUserFilter switchUserFilter) throws Exception {
 		http
 			.addFilterAt(switchUserFilter, SwitchUserFilter.class)
-			.csrf(csrf -> csrf.disable())
+			.csrf(csrf -> { })
 			.authorizeHttpRequests(auth -> auth
-				.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+				.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").hasRole("ADMIN")
 				.requestMatchers("/login**", "/signup**", "/application*").permitAll()
 				.requestMatchers("/secure/admin/**").hasRole("ADMIN")
 				.requestMatchers("/secure/company/**").hasRole("COMPANY")

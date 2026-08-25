@@ -9,6 +9,7 @@
 
 <h1>Sign In</h1>
 <form action="${pageContext.request.contextPath}/auth" method="post" class="brform">
+	\t<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 	<c:if test="${param.error != null}">
 		<div class="error"><spring:message code="login.failure" /></div><br />
 	</c:if>
