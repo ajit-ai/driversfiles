@@ -31,9 +31,7 @@ import com.driversfiles.www.core.data.Person;
 import com.driversfiles.www.core.data.State;
 import com.driversfiles.www.fs.FileStoreService;
 import com.driversfiles.www.fs.ImageInfo;
-import com.driversfiles.www.fs.Scalr;
-import com.driversfiles.www.fs.Scalr.Method;
-
+import com.driversfiles.www.fs.ImageScaler;
 import java.util.Arrays;
 
 
@@ -200,7 +198,7 @@ public class MyCompanyController {
 		InputStream imageStream = iconFile.getInputStream();
 		BufferedImage imageBuffer = ImageIO.read(imageStream);
 		
-		BufferedImage scaledImage = Scalr.resize(imageBuffer, Method.BALANCED, LOGO_MAX_WIDTH, LOGO_MAX_HEIGHT);
+		BufferedImage scaledImage = ImageScaler.resize(imageBuffer, LOGO_MAX_WIDTH, LOGO_MAX_HEIGHT);
 		imageBuffer.flush();
 
 		fileStoreService.saveImage("company/icon/" + uuid, "jpg", scaledImage);
