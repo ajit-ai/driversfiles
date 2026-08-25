@@ -1,52 +1,27 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
-<%@ taglib prefix="util" uri="util" %>
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8" isELIgnored="false"%>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Application Error (500)</title>
-	<link type="text/css" href="${pageContext.request.contextPath}/resources/css/driversfiles.css" rel="stylesheet" />
-	<link type="text/css" href="${pageContext.request.contextPath}/resources/js/jquery-ui/css/humanity/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/driversfiles.js"></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Something Went Wrong (500) :: Drivers Files</title>
+	<link type="text/css" href="$\{pageContext.request.contextPath\}/resources/vendor/bootstrap.min.css" rel="stylesheet" />
+	<style>
+		body { background: #f4f6f8; font-family: 'Segoe UI', system-ui, sans-serif; }
+		.err-card { max-width: 560px; margin: 12vh auto; background: #fff; border-radius: 14px;
+			box-shadow: 0 10px 30px rgba(0,0,0,.12); padding: 48px; text-align: center; }
+		.err-code { font-size: 4rem; font-weight: 800; color: #f18700; line-height: 1; }
+		h1 { font-size: 1.3rem; color: #2c3e50; margin-top: 12px; }
+		p { color: #6c757d; }
+	</style>
 </head>
 <body>
-
-
-<div id="wrapper">
-	<div id="header">
-		<div id="header-login">
-		</div>
-		<div id="header-menu">
-			<ul>
-				<li><a href="${pageContext.request.contextPath}/secure/entry" id="menu-home">Home</a></li>
-			</ul>
-		</div>
+	<div class="err-card">
+		<div class="err-code">500</div>
+		<h1>Something Went Wrong (500)</h1>
+		<p>An unexpected error occurred. If this problem persists please report it to the webmaster.</p>
+		<a class="btn btn-warning fw-semibold px-4 mt-2" href="$\{pageContext.request.contextPath\}/" style="background:#f18700;border-color:#f18700;color:#fff;">Back to Home</a>
 	</div>
-	<div id="secondary-menu">
-	</div>
-	<div id="content">
-		
-		<h1>Application Error</h1>
-		<p>Oops! You have encountered a program error. Please report this problem to the webmaster.</p>
-		
-		<br class="clear" />
-	</div>
-	<div id="footer">
-		Copyright &copy; 2011 - Drivers Files, Inc.
-	</div>
-</div>
-
-
-
 </body>
 </html>
