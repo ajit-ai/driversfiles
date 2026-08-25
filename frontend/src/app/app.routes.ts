@@ -24,13 +24,19 @@ export const routes: Routes = [
           { path: 'employments', loadComponent: () => import('./pages/driver/employments.component').then((m) => m.EmploymentsComponent) },
           { path: 'accidents', loadComponent: () => import('./pages/driver/accidents.component').then((m) => m.AccidentsComponent) },
           { path: 'traffics', loadComponent: () => import('./pages/driver/traffics.component').then((m) => m.TrafficsComponent) },
+          { path: 'documents', loadComponent: () => import('./pages/driver/documents.component').then((m) => m.DocumentsComponent) },
           { path: 'access-code', loadComponent: () => import('./pages/driver/access-code.component').then((m) => m.AccessCodeComponent) }
         ]
       },
       {
         path: 'company',
         canActivate: [roleGuard('ROLE_COMPANY')],
-        loadComponent: () => import('./pages/coming-soon.component').then((m) => m.ComingSoonComponent)
+        loadComponent: () => import('./pages/company/company-shell.component').then((m) => m.CompanyShellComponent),
+        children: [
+          { path: '', loadComponent: () => import('./pages/coming-soon.component').then((m) => m.ComingSoonComponent) },
+          { path: 'profile', loadComponent: () => import('./pages/company/profile.component').then((m) => m.CompanyProfileComponent) },
+          { path: 'drivers', loadComponent: () => import('./pages/company/drivers.component').then((m) => m.CompanyDriversComponent) }
+        ]
       },
       {
         path: 'admin',

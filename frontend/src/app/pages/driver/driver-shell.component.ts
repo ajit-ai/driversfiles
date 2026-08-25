@@ -16,6 +16,7 @@ import { AuthService } from '../../core/auth.service';
           <a routerLink="/driver/employments" routerLinkActive="active" class="list-group-item list-group-item-action">Employment History</a>
           <a routerLink="/driver/accidents" routerLinkActive="active" class="list-group-item list-group-item-action">Accidents</a>
           <a routerLink="/driver/traffics" routerLinkActive="active" class="list-group-item list-group-item-action">Traffic Convictions</a>
+          <a routerLink="/driver/documents" routerLinkActive="active" class="list-group-item list-group-item-action">Documents</a>
           <a routerLink="/driver/access-code" routerLinkActive="active" class="list-group-item list-group-item-action">My Access Code</a>
         </div>
       </div>

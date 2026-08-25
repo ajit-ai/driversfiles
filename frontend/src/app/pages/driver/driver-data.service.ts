@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { API_BASE } from '../../core/auth.service';
-import { AccessCodeInfo, Accident, Employment, License, Residence, Traffic } from './driver.models';
+import { AccessCodeInfo, Accident, DriverDocument, Employment, License, Residence, Traffic } from './driver.models';
 
 @Injectable({ providedIn: 'root' })
 export class DriverDataService {
@@ -34,6 +34,12 @@ export class DriverDataService {
   deleteTraffic = (uuid: string) => this.http.delete<void>(`${this.base}/traffics/${uuid}`);
 
   accessCode = () => this.http.get<AccessCodeInfo>(`${this.base}/access-code`);
+
+  documents = () => this.http.get<DriverDocument[]>(`${this.base}/documents`);
+  uploadDocument = (form: FormData) =>
+    this.http.post<DriverDocument>(`${this.base}/documents`, form);
+  deleteDocument = (uuid: string) => this.http.delete<void>(`${this.base}/documents/${uuid}`);
+  documentDownloadUrl = (uuid: string) => `${this.base}/documents/${uuid}/download`;
 }
 
 export interface PersonalInfo {

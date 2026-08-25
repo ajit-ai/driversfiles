@@ -55,3 +55,11 @@ export interface AccessCodeInfo {
   accessCode: string;
   createdDate?: string;
 }
+
+export interface DriverDocument {
+  uuid: string;
+  typeCode: string;
+  filename: string;
+  effectiveDate?: string;
+  expirationDate?: string;
+}
