@@ -145,22 +145,24 @@ Once running (default port **8080**):
 ## Testing
 
 ```bash
-mvn test
+mvn test        # 51 tests, JUnit 5
 ```
 
-The JUnit 5 suite covers:
+Covered areas:
 
-- `CustomPasswordEncoderTest` — hash format + **legacy credential compatibility** regression test
-- `HashedFieldTest` — salted SHA-256 hashing contract (format, randomness, determinism)
-- `AuthDetailsTest` — authority mapping and folded password format
-- `IOHelperTest`, `ThrowableHelperTest` — utility behavior
-- `PersonTest` — entity equals/hashCode contract
-- `CriteriaShimTest` — criteria DSL used by all DAOs
-- `TilesDefinitionsTest` — tiles.xml parsing + inheritance flattening
-- `JCaptchaServiceImplTest` — captcha image generation end-to-end
+| Suite | Focus |
+|---|---|
+| `CustomPasswordEncoderTest` | Hash format + **legacy credential compatibility** regression |
+| `HashedFieldTest` | Salted SHA-256 hashing contract |
+| `AuthDetailsTest` | Authority mapping, folded password format, lock state |
+| `ImageScalerTest` | Logo resize: aspect fit, no-upscale, transparency flattening |
+| `JCaptchaServiceImplTest` | Captcha generation + validate/consume lifecycle |
+| `CriteriaShimTest` | Criteria DSL used by all DAOs |
+| `TilesDefinitionsTest` | tiles.xml parsing + inheritance flattening |
+| `IOHelperTest`, `ThrowableHelperTest`, `PersonTest` | Utilities & entity contracts |
 
-Database-dependent layers (DAOs against live PostgreSQL, controllers) are exercised through
-the running application; integration tests with Testcontainers are a planned enhancement.
+Integration tests against a live PostgreSQL (or Testcontainers) are a planned enhancement;
+database-backed layers are currently exercised through the running application.
 
 ## Roles & Access
 
