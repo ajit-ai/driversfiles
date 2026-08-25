@@ -3,6 +3,12 @@ target/
 bin/
 out/
 
+# --- Angular frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/npm-debug.log*
+
 # --- IDE: Eclipse ---
 .metadata/
 .settings/
