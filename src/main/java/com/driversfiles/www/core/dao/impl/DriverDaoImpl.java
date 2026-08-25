@@ -3,10 +3,10 @@ package com.driversfiles.www.core.dao.impl;
 import java.util.Calendar;
 import java.util.List;
 
-import org.hibernate.criterion.Criterion;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.MatchMode;
-import org.hibernate.criterion.Restrictions;
+import com.driversfiles.www.core.dao.criteria.Criterion;
+import com.driversfiles.www.core.dao.criteria.DetachedCriteria;
+import com.driversfiles.www.core.dao.criteria.MatchMode;
+import com.driversfiles.www.core.dao.criteria.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -48,7 +48,7 @@ public class DriverDaoImpl extends DaoImpl<Driver, Long> implements DriverDao {
 	public Driver getDriver(Person person) {
 		DetachedCriteria dc = DetachedCriteria.forClass(getEntityClass());
 		dc.add(Restrictions.eq("person", person));
-		List<Driver> list = getHibernateTemplate().findByCriteria(dc);
+		List<Driver> list = findByCriteria(dc);
 		return (list.size() > 0 ? list.get(0) : null);
 	}
 	
@@ -88,7 +88,7 @@ public class DriverDaoImpl extends DaoImpl<Driver, Long> implements DriverDao {
 		DetachedCriteria dc = DetachedCriteria.forClass(getEntityClass());
 		dc.add(Restrictions.eq("accessCode", code.toUpperCase()));
 		dc.add(Restrictions.gt("accessCodeCreatedDate", validDate.getTime()));
-		List<Driver> list = getHibernateTemplate().findByCriteria(dc);
+		List<Driver> list = findByCriteria(dc);
 		return (list.size() > 0 ? list.get(0) : null);
 	}
 
@@ -104,7 +104,7 @@ public class DriverDaoImpl extends DaoImpl<Driver, Long> implements DriverDao {
 		Criterion or1 = Restrictions.le("accessCodeCreatedDate", validDate.getTime());
 		Criterion or2 = Restrictions.isNull("accessCodeCreatedDate");
 		dc.add(Restrictions.or(or1,  or2));
-		List<Driver> list = getHibernateTemplate().findByCriteria(dc);
+		List<Driver> list = findByCriteria(dc);
 		return list;
 	}
 

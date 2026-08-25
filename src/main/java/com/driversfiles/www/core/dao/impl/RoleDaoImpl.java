@@ -7,8 +7,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static org.hibernate.criterion.Restrictions.eq;
-import static org.hibernate.criterion.Restrictions.isNotNull;
+import static com.driversfiles.www.core.dao.criteria.Restrictions.eq;
+import static com.driversfiles.www.core.dao.criteria.Restrictions.isNotNull;
 
 /**
  * {@inheritDoc}

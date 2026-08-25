@@ -2,7 +2,7 @@ package com.driversfiles.www.core.data;
 
 import com.driversfiles.www.core.dao.Auditable;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -1,6 +1,6 @@
 package com.driversfiles.www.driver;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import com.driversfiles.www.auth.AuthService;
 import com.driversfiles.www.core.controller.BaseController;

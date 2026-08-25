@@ -5,14 +5,11 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.*;
-
-import org.hibernate.annotations.Columns;
-import org.hibernate.annotations.Type;
+import jakarta.persistence.*;
 
 import com.driversfiles.www.auth.AuthService;
 import com.driversfiles.www.core.dao.Auditable;
-import com.netradius.hibernate.support.HashedField;
+import com.driversfiles.www.hibernate.HashedField;
 
 /**
  * Holds person data.
@@ -37,8 +34,7 @@ public class Person implements Serializable, Auditable, UUIDIdentified {
 	@Column(name = "email", nullable = false, unique = true, length = 100)
 	private String email;
 
-	@Columns(columns = { @Column(name = "password", length = 46), @Column(name = "salt", length = 40) })
-	@Type(type = "com.driversfiles.www.hibernate.PasswordFieldUserType")
+	@Embedded
 	private HashedField password;
 
 	@Enumerated(EnumType.STRING)

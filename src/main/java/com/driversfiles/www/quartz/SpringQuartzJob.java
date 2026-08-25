@@ -1,16 +1,21 @@
 package com.driversfiles.www.quartz;
 
 import com.driversfiles.www.spring.SpringUtil;
+import org.quartz.DisallowConcurrentExecution;
+import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-import org.quartz.StatefulJob;
+import org.quartz.PersistJobDataAfterExecution;
 
-/** Base class for Spring aware Quartz jobs. 
+/**
+ * Base class for Spring aware Quartz jobs.
  *
  * @author Erik R. Jensen
  */
-public abstract class SpringQuartzJob implements StatefulJob {
-	
+@PersistJobDataAfterExecution
+@DisallowConcurrentExecution
+public abstract class SpringQuartzJob implements Job {
+
 	@Override
 	public final void execute(JobExecutionContext ctx) throws JobExecutionException {
 		SpringUtil.getApplicationContext().getAutowireCapableBeanFactory().autowireBean(this);

@@ -12,7 +12,7 @@ import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.authentication.encoding.PasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.authentication.event.AbstractAuthenticationFailureEvent;
 import org.springframework.security.authentication.event.AuthenticationSuccessEvent;
 import org.springframework.security.core.Authentication;
@@ -171,8 +171,8 @@ public class AuthServiceImpl implements AuthService, ApplicationListener {
 	@Override
 	public boolean isPasswordValid(String password, String username) {
 		Person p = personDao.findByEmail(username);
-		return p != null &&  passwordEncoder.isPasswordValid(
-				p.getPassword().getValue(), password, p.getPassword().getSalt());
+		return p != null && p.getPassword().getValue() != null && passwordEncoder.matches(password,
+				p.getPassword().getValue() + ":" + p.getPassword().getSalt());
 	}
 
 	/**

@@ -1,7 +1,5 @@
 <%@include file="../../include.jsp"%>
 
-<%@ taglib prefix="display" uri="http://displaytag.sf.net" %>
-
 <h1>
 	User Management
 	<a class="add" href="${pageContext.request.contextPath}/secure/admin/users/new">New User</a>

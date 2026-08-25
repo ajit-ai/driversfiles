@@ -3,9 +3,9 @@ package com.driversfiles.www.core.dao.impl;
 import com.driversfiles.www.core.dao.PersonDao;
 import com.driversfiles.www.core.data.Person;
 import com.driversfiles.www.core.data.PersonType;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.MatchMode;
-import org.hibernate.criterion.Projections;
+import com.driversfiles.www.core.dao.criteria.DetachedCriteria;
+import com.driversfiles.www.core.dao.criteria.MatchMode;
+import com.driversfiles.www.core.dao.criteria.Projections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static org.apache.commons.lang.StringUtils.isNotBlank;
-import static org.hibernate.criterion.Order.asc;
-import static org.hibernate.criterion.Restrictions.*;
+import static com.driversfiles.www.core.dao.criteria.Order.asc;
+import static com.driversfiles.www.core.dao.criteria.Restrictions.*;
 
 /**
  * {@inheritDoc}

@@ -3,7 +3,7 @@ package com.driversfiles.www.core.controller;
 import com.driversfiles.www.core.NotFoundException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**

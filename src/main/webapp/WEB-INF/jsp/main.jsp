@@ -1,4 +1,4 @@
-<%@ include file="include.jsp" %>
+﻿<%@ include file="include.jsp" %>
 <div id="wrapper">
 	<div id="header">
 		<div id="header-login">
@@ -7,7 +7,7 @@
 				<c:out value="${pageContext.request.userPrincipal.principal.person.firstName}" />
 				<c:out value="${pageContext.request.userPrincipal.principal.person.lastName}" />
 				- <a href="${pageContext.request.contextPath}/secure/common/accounts/${pageContext.request.userPrincipal.principal.person.uuid}">My Account</a>
-				- <a href="${pageContext.request.contextPath}/j_spring_security_logout">Sign Out</a>
+				- <a href="${pageContext.request.contextPath}/logout">Sign Out</a>
 			</security:authorize>
 			<security:authorize access="hasRole('ROLE_ADMIN')">
 				<a href="#" onclick="return doUserSearch();"><img src="${pageContext.request.contextPath}/resources/images/search_24x24.png" style="vertical-align: middle; margin-left: 20px;" /></a>
@@ -23,21 +23,21 @@
 			</security:authorize>
 		</div>
 		<div id="header-menu">
-			<tiles:insertAttribute name="menu" />
+			<c:if test="${not empty menu}"><jsp:include page="${menu}"/></c:if>
 		</div>
 	</div>
 	<div id="secondary-menu">
-		<tiles:insertAttribute name="secondary_menu" ignore="true" />
+		<c:if test="${not empty secondary_menu}"><jsp:include page="${secondary_menu}"/></c:if>
 	</div>
 	<div id="content">
 		<c:if test="${param.message == 'success'}">
 			<div id="success"><div>Update successful</div></div>
 		</c:if>
-		<tiles:insertAttribute name="content" />
+		<c:if test="${not empty content}"><jsp:include page="${content}"/></c:if>
 		<br class="clear" />
 	</div>
 	<div id="footer">
-		<tiles:insertAttribute name="footer" ignore="true" />
+		<c:if test="${not empty footer}"><jsp:include page="${footer}"/></c:if>
 	</div>
 </div>
 

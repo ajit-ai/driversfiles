@@ -2,8 +2,8 @@ package com.driversfiles.www.core.dao.impl;
 
 import com.driversfiles.www.core.dao.DataImportDao;
 import com.driversfiles.www.core.data.DataImport;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
+import com.driversfiles.www.core.dao.criteria.Order;
+import com.driversfiles.www.core.dao.criteria.Restrictions;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,20 +34,20 @@ public class DataImportDaoImpl extends DaoImpl<DataImport, Long> implements Data
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW)
 //	@Transactional(readOnly = false)
 	public void update(Long id, Date startTime) {
-		getHibernateTemplate().bulkUpdate("update DataImport set startTime = ? where id = ?", startTime, id);
+		bulkUpdate("update DataImport set startTime = ? where id = ?", startTime, id);
 	}
 
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW)
 //	@Transactional(readOnly = false)
 	public void update(Long id, String log) {
-		getHibernateTemplate().bulkUpdate("update DataImport set log = ? where id = ?", log, id);
+		bulkUpdate("update DataImport set log = ? where id = ?", log, id);
 	}
 
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRES_NEW)
 //	@Transactional(readOnly = false)
 	public void update(Long id, Date endTime, boolean success) {
-		getHibernateTemplate().bulkUpdate("update DataImport set success = ?, endTime = ? where id = ?", success, endTime, id);
+		bulkUpdate("update DataImport set success = ?, endTime = ? where id = ?", success, endTime, id);
 	}
 }

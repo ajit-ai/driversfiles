@@ -6,7 +6,7 @@ import com.driversfiles.www.core.data.PropertyName;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.hibernate.criterion.Restrictions.eq;
+import static com.driversfiles.www.core.dao.criteria.Restrictions.eq;
 
 @Repository("propertyDao")
 @Transactional
@@ -19,7 +19,7 @@ public class PropertyDaoImpl extends DaoImpl<Property, PropertyName> implements 
 
 	@Override
 	public boolean update(PropertyName name, String value) {
-		return getHibernateTemplate().bulkUpdate("update Property p set value = ? where name = ?", value, name) > 0;
+		return bulkUpdate("update Property p set value = ? where name = ?", value, name) > 0;
 	}
 
 	@Override

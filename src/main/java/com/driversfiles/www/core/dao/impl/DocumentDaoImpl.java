@@ -2,8 +2,8 @@ package com.driversfiles.www.core.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
+import com.driversfiles.www.core.dao.criteria.DetachedCriteria;
+import com.driversfiles.www.core.dao.criteria.Restrictions;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,7 +36,7 @@ public class DocumentDaoImpl extends DaoImpl<Document, Long> implements Document
 	public List<Document> getDocuments(Person person) {
 		DetachedCriteria dc = DetachedCriteria.forClass(getEntityClass());
 		dc.add(Restrictions.eq("person", person));
-		return getHibernateTemplate().findByCriteria(dc);
+		return findByCriteria(dc);
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class DocumentDaoImpl extends DaoImpl<Document, Long> implements Document
 		DetachedCriteria dc = DetachedCriteria.forClass(getEntityClass());
 		dc.add(Restrictions.eq("person", person));
 		dc.add(Restrictions.eq("typeCode", type));
-		List<Document> list = getHibernateTemplate().findByCriteria(dc);
+		List<Document> list = findByCriteria(dc);
 		return (list.size() > 0 ? list.get(0) : null);
 	}
 

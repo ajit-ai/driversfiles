@@ -3,7 +3,7 @@ package com.driversfiles.www.auth;
 import com.driversfiles.www.core.data.Role;
 import com.driversfiles.www.core.data.Person;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
@@ -34,17 +34,19 @@ public class AuthDetails implements UserDetails {
 	public Collection<GrantedAuthority> getAuthorities() {
 		final List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 		for (Role r: person.getRoles()) {
-			authorities.add(new GrantedAuthorityImpl(r.getName()));
+			authorities.add(new SimpleGrantedAuthority(r.getName()));
 		}
 		for (String r: dynamicRoles) {
-			authorities.add(new GrantedAuthorityImpl(r));
+			authorities.add(new SimpleGrantedAuthority(r));
 		}
 		return authorities;
 	}
 
 	@Override
 	public String getPassword() {
-		return person.getPassword().getValue();
+		return person.getPassword().getSalt() != null && person.getPassword().getValue() != null
+				? person.getPassword().getValue() + ":" + person.getPassword().getSalt()
+				: null;
 	}
 
 	public String getSalt() {

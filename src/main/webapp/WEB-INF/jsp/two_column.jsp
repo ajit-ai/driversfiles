@@ -1,11 +1,11 @@
-<%@include file="include.jsp"%>
+﻿<%@include file="include.jsp"%>
 
 <div class="two-col-wrapper">
 	<div class="two-col-right">
-		<tiles:insertAttribute name="right" ignore="true" />
+		<c:if test="${not empty right}"><jsp:include page="${right}"/></c:if>
 	</div>
 </div>
 
 <div class="two-col-left">
-	<tiles:insertAttribute name="left" ignore="true" />
+	<c:if test="${not empty left}"><jsp:include page="${left}"/></c:if>
 </div>

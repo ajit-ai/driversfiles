@@ -2,8 +2,8 @@ package com.driversfiles.www.core.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
+import com.driversfiles.www.core.dao.criteria.DetachedCriteria;
+import com.driversfiles.www.core.dao.criteria.Restrictions;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,7 +37,7 @@ public class LicenseDaoImpl extends DaoImpl<License, Long> implements LicenseDao
 		DetachedCriteria dc = DetachedCriteria.forClass(getEntityClass());
 		dc.add(Restrictions.eq("driver", driver));
 		dc.add(Restrictions.eq("current", true));
-		List<License> list = getHibernateTemplate().findByCriteria(dc);
+		List<License> list = findByCriteria(dc);
 		return (list.size() > 0 ? list.get(0) : null);
 	}
 

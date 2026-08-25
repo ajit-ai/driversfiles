@@ -4,7 +4,7 @@ import com.driversfiles.www.core.dao.EventDao;
 import com.driversfiles.www.core.data.Event;
 import com.driversfiles.www.core.data.EventType;
 import com.driversfiles.www.core.data.Person;
-import org.hibernate.criterion.Order;
+import com.driversfiles.www.core.dao.criteria.Order;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import static org.hibernate.criterion.Restrictions.eq;
+import static com.driversfiles.www.core.dao.criteria.Restrictions.eq;
 
 /**
  * {@inheritDoc}
@@ -86,7 +86,7 @@ public class EventDaoImpl extends DaoImpl<Event, Long> implements EventDao {
 	public void purgeEvents() {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, -12);
-		getHibernateTemplate().bulkUpdate("delete Event e where e.eventDate < ?", cal.getTime());
+		bulkUpdate("delete Event e where e.eventDate < ?", cal.getTime());
 	}
 
 	private Event createEvent(EventType type, String message) {

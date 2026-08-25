@@ -1,0 +1,51 @@
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/driversfiles
+    username: driversfiles
+    password: driversfiles
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 25
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: true
+    properties:
+      hibernate:
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        jdbc:
+          batch_size: 1000
+        order_inserts: true
+        order_updates: true
+  mail:
+    host: localhost
+    port: 25
+    recipient: test@driversfiles.com
+    from: noreply@driversfiles.com
+  quartz:
+    job-store-type: memory
+    startup-delay: 10s
+    auto-startup: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 25MB
+
+app:
+  db:
+    batch-size: 1000
+  external-file-store: /opt/driversfiles/
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  servlet:
+    session:
+      timeout: 600m
+
+logging:
+  level:
+    root: info

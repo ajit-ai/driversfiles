@@ -3,8 +3,8 @@ package com.driversfiles.www.core.dao.impl;
 import java.util.List;
 
 import com.driversfiles.www.core.data.Driver;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
+import com.driversfiles.www.core.dao.criteria.DetachedCriteria;
+import com.driversfiles.www.core.dao.criteria.Restrictions;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
