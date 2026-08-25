@@ -44,9 +44,12 @@ public class AuthDetails implements UserDetails {
 
 	@Override
 	public String getPassword() {
-		return person.getPassword().getSalt() != null && person.getPassword().getValue() != null
-				? person.getPassword().getValue() + ":" + person.getPassword().getSalt()
-				: null;
+		if (person.getPassword() == null
+				|| person.getPassword().getValue() == null
+				|| person.getPassword().getSalt() == null) {
+			return null;
+		}
+		return person.getPassword().getValue() + ":" + person.getPassword().getSalt();
 	}
 
 	public String getSalt() {

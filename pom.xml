@@ -86,17 +86,6 @@
 			<artifactId>freemarker</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.octo.captcha</groupId>
-			<artifactId>jcaptcha</artifactId>
-			<version>${jcaptcha.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.jhlabs</groupId>
-					<artifactId>imaging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
 			<groupId>net.sf.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
 			<version>${opencsv.version}</version>
